@@ -5,7 +5,7 @@ data = pd.read_csv('HomelessPeople.csv')
 # cleaning up the database to make it easier to use 
 data.columns = data.iloc[1]
 data.drop(columns=['ONS code','MCHLG Spotlight (2022)', 'MCHLG Spotlight (2023)','CHAIN (2022/23)'], inplace=True)
-data = data.rename(columns={'CHAIN (2022/23)' : 'homeless_people'})
+data = data.rename(columns={'CHAIN (2023/24)' : 'homeless_people'})
 
 def splitofmoney (x):
     
