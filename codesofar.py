@@ -1,7 +1,8 @@
 import pandas as pd
 
 
-data = pd.read_csv('HomelessPeople.csv')
+homelessdata_df = pd.read_csv('HomelessPeople.csv')
+
 
 def splitofmoney (x):
     
