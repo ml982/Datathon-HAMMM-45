@@ -5,7 +5,7 @@ data = pd.read_csv('.csv')
 
 def splitofmoney (x):
     
-    a,b=0.4,0.6
+    a,b = 0.4,0.6
 
     weights = {
         'homeless_people': 0.6,
