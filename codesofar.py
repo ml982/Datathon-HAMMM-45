@@ -11,7 +11,7 @@ def splitofmoney (x):
         'homeless_people': 0.6,
         #'meanaffordability': 0.4,
         'noofshelters': a,
-        'foodbanks': 0.6
+        'foodbanks': b
     }
 
     weightings = {
