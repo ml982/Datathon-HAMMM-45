@@ -6,7 +6,7 @@ data = pd.read_csv('HomelessPeople.csv')
 def splitofmoney (x):
     
     #removing unnecessary columns  (FILL THIS IN PLS COS I DONT UNDERSTAND THE CURRENT DOC)
-    data = data.drop(columns=['ONS CODE',''], inplace=True)
+    data = data.drop(columns=['ONS CODE','MCHLG Spotlight (2022)', 'CHAIN (2022/2023)'], inplace=True)
     
     #defining a and b, where a is no. of shelters and b is no. of food banks
     a,b=0.4,0.6
