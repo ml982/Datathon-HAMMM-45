@@ -2,12 +2,12 @@ import pandas as pd
 
 
 data = pd.read_csv('HomelessPeople.csv')
+# cleaning up the database to make it easier to use 
+data.columns = data.iloc[1]
+data = data.drop(columns=['ONS CODE','MCHLG Spotlight (2022)', 'MCHLG Spotlight (2023)','CHAIN (2022/23)'], inplace=True)
+data = data.rename(columns={'CHAIN (2022/23)' : 'homeless_people'})
 
 def splitofmoney (x):
-    
-    #removing unnecessary columns  (FILL THIS IN PLS COS I DONT UNDERSTAND THE CURRENT DOC)
-    data = data.drop(columns=['ONS CODE','MCHLG Spotlight (2022)', 'MCHLG Spotlight (2023)','CHAIN (2022/23)'], inplace=True)
-    data = data.rename(columns={'CHAIN (2022/23)' : 'homeless_people'})
     
     #defining a and b, where a is no. of shelters and b is no. of food banks
     a,b=0.4,0.6
