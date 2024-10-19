@@ -7,20 +7,21 @@ def splitofmoney (x):
     
     #removing unnecessary columns  (FILL THIS IN PLS COS I DONT UNDERSTAND THE CURRENT DOC)
     data = data.drop(columns=['ONS CODE','MCHLG Spotlight (2022)', 'MCHLG Spotlight (2023)','CHAIN (2022/23)'], inplace=True)
+    data = data.rename(columns={'CHAIN (2022/23)' : 'homeless_people'})
     
     #defining a and b, where a is no. of shelters and b is no. of food banks
     a,b=0.4,0.6
 
     weights = {
         'homeless_people': 0.6,
-        #'meanaffordability': 0.4,
+        'meanaffordability': 0.4,
         'noofshelters': a,
         'foodbanks': b
     }
 
     weightings = {
         data['homeless_people']*weights['homeless_people'],
-        #data['meanaffordability']*weights['meanaffordability']
+        data['meanaffordability']*weights['meanaffordability']
     }
     
     #Calculating the total number of homeless people in total in London
