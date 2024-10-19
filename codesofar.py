@@ -1,11 +1,14 @@
 import pandas as pd
 
 
-homelessdata_df = pd.read_csv('HomelessPeople.csv')
-
+data = pd.read_csv('HomelessPeople.csv')
 
 def splitofmoney (x):
     
+    #removing unnecessary columns  (FILL THIS IN PLS COS I DONT UNDERSTAND THE CURRENT DOC)
+    df.drop(columns=[' NAME OF COLUMN '], inplace=True)
+    
+    #defining a and b, where a is no. of shelters and b is no. of food banks
     a,b=0.4,0.6
 
     weights = {
